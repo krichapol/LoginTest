@@ -29,7 +29,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 NameString = NameEditText.getText().toString().trim();
-                Toast.makeText(getApplicationContext(),"Hello "+NameString,Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(),"Hello!! " +NameString,Toast.LENGTH_SHORT).show();
             }
         });
 
