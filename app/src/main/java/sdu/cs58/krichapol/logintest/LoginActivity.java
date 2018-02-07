@@ -9,9 +9,10 @@ import android.widget.Toast;
 
 public class LoginActivity extends AppCompatActivity {
 
-    //1. Explicit (ประกาศตัวแปล)
+    //1. Explicit (ประกาศตัวแปรบน Java)
     EditText NameEditText, UsernameEditText, PasswordEditText;
     Button LoginButton;
+    String NameString;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +28,8 @@ public class LoginActivity extends AppCompatActivity {
         LoginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getApplicationContext(),"Hello!!",Toast.LENGTH_SHORT).show();
+                NameString = NameEditText.getText().toString().trim();
+                Toast.makeText(getApplicationContext(),"Hello " +NameString,Toast.LENGTH_SHORT).show();
             }
         });
 
